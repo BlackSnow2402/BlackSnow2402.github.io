@@ -37,7 +37,7 @@
           <p>Верстка на HTML и CSS <br>Разработка сайтов под ключ</p>
         </div>
       </div>
-      <a href="#portfolio" class="main-down"><i class="icon-down"></i></a>
+      <a href="#portfolio" class="main-down slowly"><i class="icon-down"></i></a>
     </div>
 
     <!-- Portfolio -->
@@ -110,6 +110,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
     <script>
       $(function() {
         var link = $('a[data-toggle="modal"]');
@@ -120,17 +121,20 @@
         });
       });
     </script>
+
     <script>
-      $(document).ready(function()) {
-        $(".slowly").on("click", "a", function(event) {
+      $(document).ready(function() {
+        $('.slowly').on("click", function(event) {
           event.preventDefault();
 
-          var id = $(this).attr("href"),
+          var id = $(this).attr('href'),
 
           top = $(id).offset().top;
+
           $('body,html').animate({scrollTop: top}, 500);
-        })
-      }
+        });
+      });
     </script>
+
   </body>
 </html>
